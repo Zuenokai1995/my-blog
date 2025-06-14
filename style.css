@@ -1,39 +1,79 @@
-body {
-  font-family: 'Georgia', serif;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: auto;
-  padding: 2rem;
-  background: #faf8f5;
-  color: #333;
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
 header {
   text-align: center;
-  margin-bottom: 2rem;
+  padding-bottom: 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #2c3e50;
 }
 
-article {
-  margin-bottom: 2rem;
+header p {
+  color: #7f8c8d;
 }
 
-article h2 a {
-  color: #2a4d69;
+/* Navigation */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav a {
   text-decoration: none;
+  color: #3498db;
+  margin: 0 15px;
+  font-weight: bold;
 }
 
-article h2 a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
+/* Blog posts */
+article {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+article p {
+  margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-  color: #777;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 0.9em;
 }
