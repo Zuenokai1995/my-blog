@@ -48,11 +48,11 @@ main {
 }
 
 h2 {
-  margin: 20px auto;
-  max-width: 90%;
-  text-align: center;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
+  h2 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 }
 
 
