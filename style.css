@@ -48,9 +48,13 @@ main {
 }
 
 h2 {
-  color: #222;
-  font-size: 1.8rem;
+  margin: 20px auto;
+  max-width: 90%;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
 }
+
 
 p {
   line-height: 1.6;
