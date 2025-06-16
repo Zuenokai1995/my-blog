@@ -1,29 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Why I Write</title>
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #181818;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1 1 100%;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .column:nth-child(1) {
+      background-color: #fff3d4;
+      animation-delay: 0.2s;
+    }
+
+    .column:nth-child(2) {
+      background-color: #d4f0ff;
+      animation-delay: 0.4s;
+    }
+
+    .column:nth-child(3) {
+      background-color: #f0ffd4;
+      animation-delay: 0.6s;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #181818;
+      color: white;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .column {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Day 1 (frfr somehow i made here without been lazy)</h1>
+    <h1>Day 1 (frfr somehow I made it here without being lazy)</h1>
     <p>Posted on June 15, 2025</p>
   </header>
 
-  <main>
-    <p>Hey its zane, rn its 12:30am now of 16th june. today (yesterday) was a really good start day where i learnt about tilemap and collisons and sprite and tilemap
-      tho i accidently made the background and ground tile in one tilemap causing the charecter to be stuck in walls, sucks ik but im pretty impressed i even pulled something off like that using tile palette and stuff
-      well, ill be redoing the tile map and make seperate the two. also i was actually able to draw some good 16x16 bits pixel art but i think i made the slimes bigger than the mc itslef lol. ill see what i might be able to do with it
-      alright.
-      signing off.
+  <div class="container">
 
-      -Zuenokai
-  </main>
+    <div class="column">
+      <h2>🎮 What I Did Today</h2>
+      <p>
+        Hey it’s Zane. Rn it’s 12:30 AM of June 16. Today (yesterday technically) was a pretty solid start. I learned about tilemaps, collisions, sprites — all that jazz.
+        I accidentally merged background and ground tiles into one tilemap, which caused my character to get stuck in walls 😅.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>🧱 Fixing the Map</h2>
+      <p>
+        I’m planning to redo the tilemap and separate background/ground layers properly this time. It’s a bit frustrating but kinda fun too.
+        Surprisingly, I managed to draw some decent 16×16 pixel art, but I think my slime enemy is bigger than the main character itself lmao.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>📝 Signing Off</h2>
+      <p>
+        Overall, I’m proud I even touched something creative today. It’s a rare win. Let’s see how long this streak lasts.
+        <br><br>
+        — Zuenokai
+      </p>
+    </div>
+
+  </div>
 
   <footer>
     <p><a href="../index.html">← Back to Home</a></p>
   </footer>
+
 </body>
 </html>
