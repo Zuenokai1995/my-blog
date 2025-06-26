@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>On the Nature of Thinking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1 1 45%;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .column:nth-child(1) {
+      background-color: #ffe7d4;
+      animation-delay: 0.2s;
+    }
+
+    .column:nth-child(2) {
+      background-color: #d4f4ff;
+      animation-delay: 0.4s;
+    }
+
+    .column:nth-child(3) {
+      background-color: #e3ffd4;
+      animation-delay: 0.6s;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+      color: white;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .column {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Day 0? ig. it's 4am</h1>
+    <p style="max-width: 700px; margin: auto;">
+      Day 3-10. I am writing this in college with my friend rn. well i wasnt gonna open this but my friend convinced me to so here i am.
+      did absolutely nothing for the past week but have collected some data regarding what ill work with and what exactly im aiming for with this project
+    </p> 
+    <p style="color: #aaa;">Posted on June 14, 2025</p>
+  </header>
+
+  <div class="container">
+    <div class="column">
+      <h2>🌱 The Idea Spark</h2>
+      <p>
+        The moment between "I'm bored" and "I'm building a game" is chaotic and inspiring. I started with a blank GitHub repo and a messy spreadsheet.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>🧠 Thoughts on Thinking</h2>
+      <p>
+        Thinking is a process we often overlook. But within silence, we can truly observe its flow. Thoughts rise, interact, fade, and return as transformed ideas.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>🎯 What’s Next?</h2>
+      <p>
+        I don’t know what I’m doing. But that’s the best part. This page is my digital diary — a place to rant, plan, and reflect while building something.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p><a href="../index.html">← Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
