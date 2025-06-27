@@ -1,10 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #eee;
+    }
+
+    nav {
+      margin: 30px 0;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4a90e2;
+      font-weight: bold;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d14ce3;
+    }
+
+    article {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    article h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    article p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -18,17 +125,16 @@
       <a href="post2.html">Post 2</a>
       <a href="post3.html">Post 3</a>
       <a href="post4.html">Post 4</a>
-      <br>
       <a href="post5.html">Post 5</a>
     </nav>
 
     <article>
-      <h2>Recent Post Title</h2>
-      <p>Post 5 is out</p>
+      <h2>🆕 Recent Post: Post 5</h2>
+      <p>It’s finally out. More chaos, more thoughts, and definitely more late-night typing.</p>
     </article>
 
     <footer>
-      &copy; 2025 Zuenokai1995 - All Rights Reserved
+      &copy; 2025 Zuenokai1995 — All Rights Reserved
     </footer>
   </div>
 </body>
