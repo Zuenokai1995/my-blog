@@ -11,12 +11,29 @@
       color: #e0e0e0;
       margin: 0;
       padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Ambient glow */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -50px;
+      left: -50px;
+      width: 120%;
+      height: 120%;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(255, 204, 153, 0.03) 0%, transparent 70%);
+      z-index: 0;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     header {
@@ -33,6 +50,7 @@
       font-size: 2.8rem;
       margin: 0;
       text-shadow: 0 0 8px #ffcc99aa;
+      animation: pulseGlow 3s ease-in-out infinite alternate;
     }
 
     header p {
@@ -83,6 +101,26 @@
       color: #d4c2aa;
     }
 
+    .glow-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      color: #fff;
+      background-color: #2a2a2a;
+      border: 1px solid #ffcc99;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 8px #ffcc99aa;
+      transition: all 0.3s ease;
+    }
+
+    .glow-btn:hover {
+      background-color: #3a3a3a;
+      box-shadow: 0 0 20px #ffcc99, 0 0 30px #ffcc99aa;
+      transform: translateY(-2px);
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -107,6 +145,15 @@
     @keyframes flicker {
       0% { text-shadow: 0 0 5px #ffcc99, 0 0 15px #ffcc99aa; }
       100% { text-shadow: 0 0 2px #ffcc99, 0 0 10px #ffcc9988; }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #ffcc99, 0 0 10px #ffcc9980;
+      }
+      100% {
+        text-shadow: 0 0 10px #ffcc99, 0 0 20px #ffcc99aa;
+      }
     }
 
     @media (max-width: 600px) {
@@ -142,7 +189,8 @@
 
     <article>
       <h2>🆕 Latest Post: Post 7</h2>
-      <p>Ashbound now has a name. The devlog continues — darker, deeper, and more determined.</p>
+      <p>“Ashbound” now has a name. The devlog continues — darker, deeper, and more determined.</p>
+      <a class="glow-btn" href="post7.html">Read Post 7 →</a>
     </article>
 
     <footer>
