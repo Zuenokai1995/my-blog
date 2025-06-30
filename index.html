@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Blog</title>
+  <title>Ashbound Devlog</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
       margin: 0;
       padding: 0;
     }
@@ -20,51 +20,53 @@
     }
 
     header {
-      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-      padding: 40px 20px;
+      background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+      padding: 60px 20px 40px;
       text-align: center;
-      color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #ffcc99;
+      border-bottom: 2px solid #333;
+      box-shadow: 0 0 20px #ffcc99;
+      animation: flicker 2s infinite alternate;
     }
 
     header h1 {
       font-size: 2.8rem;
       margin: 0;
+      text-shadow: 0 0 8px #ffcc99aa;
     }
 
     header p {
       font-size: 1.1rem;
-      margin-top: 10px;
-      color: #eee;
+      margin-top: 12px;
+      color: #eac9aa;
     }
 
     nav {
       margin: 30px 0;
       text-align: center;
-      background-color: #ffffff;
+      background-color: #111;
       padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(255, 204, 153, 0.07);
     }
 
     nav a {
       text-decoration: none;
-      color: #4a90e2;
+      color: #ffcc99;
       font-weight: bold;
       margin: 0 12px;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #d14ce3;
+      color: #ffe5b4;
     }
 
     article {
-      background-color: #fff;
+      background-color: #1a1a1a;
       padding: 25px;
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 0 12px rgba(255, 204, 153, 0.1);
       margin-bottom: 30px;
       animation: fadeIn 0.8s ease-in-out;
     }
@@ -72,20 +74,23 @@
     article h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
-      color: #333;
+      color: #ffcc99;
     }
 
     article p {
       font-size: 1.1rem;
       line-height: 1.6;
+      color: #d4c2aa;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #ddd;
+      color: #888;
+      border-top: 1px solid #222;
+      background-color: #111;
+      margin-top: 40px;
     }
 
     @keyframes fadeIn {
@@ -99,6 +104,11 @@
       }
     }
 
+    @keyframes flicker {
+      0% { text-shadow: 0 0 5px #ffcc99, 0 0 15px #ffcc99aa; }
+      100% { text-shadow: 0 0 2px #ffcc99, 0 0 10px #ffcc9988; }
+    }
+
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -106,7 +116,7 @@
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -115,8 +125,8 @@
 <body>
   <div class="container">
     <header>
-      <h1>Welcome to My Blog</h1>
-      <p>Just bragging about myself lol</p>
+      <h1>Welcome to Ashbound</h1>
+      <p>The tale unfolds in code and chaos...</p>
     </header>
 
     <nav>
@@ -131,8 +141,8 @@
     </nav>
 
     <article>
-      <h2>🆕 Recent Post: Post 5</h2>
-      <p>It’s finally out. More chaos, more thoughts, and definitely more late-night typing.</p>
+      <h2>🆕 Latest Post: Post 7</h2>
+      <p>Ashbound now has a name. The devlog continues — darker, deeper, and more determined.</p>
     </article>
 
     <footer>
