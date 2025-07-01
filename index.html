@@ -15,7 +15,6 @@
       z-index: 1;
     }
 
-    
     body::before {
       content: "";
       position: fixed;
@@ -78,20 +77,6 @@
 
     nav a:hover {
       color: #ffe5b4;
-      
-    }
-
-    @keyframe colorchange{
-      0%{
-          color: #ff0000;
-      }
-
-      50%{ 
-        color: #00ff00;
-      }
-      100%{
-        color: #0000ff;
-      }
     }
 
     article {
@@ -131,9 +116,31 @@
 
     .glow-btn:hover {
       background-color: #5a5a5a;
-      box-shadow: 0 0 20px #6c6cff, 0 0 30px #ffcc99aa;
       transform: translateY(-2px);
-      animation colorchange 2s alternate infynite;
+      animation: rainbowGlow 2s infinite linear;
+    }
+
+    @keyframes rainbowGlow {
+      0% {
+        box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow;
+        border-color: red;
+      }
+      25% {
+        box-shadow: 0 0 10px yellow, 0 0 20px green, 0 0 30px cyan;
+        border-color: yellow;
+      }
+      50% {
+        box-shadow: 0 0 10px green, 0 0 20px blue, 0 0 30px indigo;
+        border-color: green;
+      }
+      75% {
+        box-shadow: 0 0 10px blue, 0 0 20px indigo, 0 0 30px violet;
+        border-color: blue;
+      }
+      100% {
+        box-shadow: 0 0 10px violet, 0 0 20px red, 0 0 30px orange;
+        border-color: violet;
+      }
     }
 
     footer {
@@ -200,7 +207,7 @@
       <a href="post5.html">Post 5</a>
       <a href="post6.html">Post 6</a>
       <a href="post7.html">Post 7</a>
-      <a herf="post8.html">Post 8 (WIP)</a>
+      <a href="post8.html">Post 8 (WIP)</a>
     </nav>
 
     <article>
