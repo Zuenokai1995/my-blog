@@ -15,7 +15,7 @@
       z-index: 1;
     }
 
-    /* Ambient glow */
+    
     body::before {
       content: "";
       position: fixed;
@@ -78,6 +78,20 @@
 
     nav a:hover {
       color: #ffe5b4;
+      animation colorchange 2s alternate infynite;
+    }
+
+    @keyframe colorchange{
+      0%{
+          color: #ff0000;
+      }
+
+      50%{ 
+        color: #00ff00;
+      }
+      100%{
+        color: #0000ff;
+      }
     }
 
     article {
@@ -116,8 +130,8 @@
     }
 
     .glow-btn:hover {
-      background-color: #3a3a3a;
-      box-shadow: 0 0 20px #ffcc99, 0 0 30px #ffcc99aa;
+      background-color: #5a5a5a;
+      box-shadow: 0 0 20px #6c6cff, 0 0 30px #ffcc99aa;
       transform: translateY(-2px);
     }
 
@@ -185,11 +199,12 @@
       <a href="post5.html">Post 5</a>
       <a href="post6.html">Post 6</a>
       <a href="post7.html">Post 7</a>
+      <a herf="post8.html">Post 8 (WIP)</a>
     </nav>
 
     <article>
       <h2>🆕 Latest Post: Post 7</h2>
-      <p>“Ashbound” now has a name. The devlog continues — darker, deeper, and more determined.</p>
+      <p>“Ashbound” now has a name. The devlog continues — darker, deeper, and more determined. (8 wip)</p>
       <a class="glow-btn" href="post7.html">Read Post 7 →</a>
     </article>
 
