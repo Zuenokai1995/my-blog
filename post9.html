@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day 15: The Origins of Ashveil</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      color: #ffcc99;
+      padding: 60px 20px 40px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+      animation: flicker 2s infinite alternate;
+      box-shadow: 0 0 20px #ffcc99;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0 0 15px;
+      text-shadow: 0 0 8px #ffcc99aa;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .content {
+      max-width: 800px;
+      background: #1a1a1a;
+      margin: 50px auto;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 204, 153, 0.1);
+      animation: rise 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #d4c2aa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 0.9rem;
+      background-color: #111;
+      color: #777;
+      margin-top: 60px;
+      border-top: 1px solid #222;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #ffcc99;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffe5b4;
+    }
+
+    @keyframes flicker {
+      0% { text-shadow: 0 0 5px #ffcc99, 0 0 15px #ffcc99aa; }
+      100% { text-shadow: 0 0 2px #ffcc99, 0 0 10px #ffcc9988; }
+    }
+
+    @keyframes rise {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .content {
+        margin: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Day 15: The Origins of Ashveil</h1>
+    <p>
+      WE HAVE A VILLAGE READY: <strong>Ashveil</strong>.<br><br>
+      Well well well. Look at where I am now — seriously locked in and designing for days straight.  
+      As I write this, my eyes are shutting — haven’t slept in 2 days. Just my Hyperfocus ADHD, I guess.
+    </p>
+    <p style="color: #999; margin-top: 15px;">Posted on July 2, 2025</p>
+  </header>
+
+  <div class="content">
+    <p>
+      After some delay, I’m finally feeling that spark again. Just writing the word <strong>Ashbound</strong> made it all feel real.  
+      There’s something powerful about naming your world — it gives it identity.  
+      <br><br>
+      I started refining my Unity setup and blocked out the first pass of zone layouts. They’re rough, but they’re mine.  
+      UI elements, NPC pathing, and multi-layered tilemaps are next in line for exploration.  
+      <br><br>
+      And honestly? Day 15 wasn’t just more progress — it felt like the **moment of ignition**.
+    </p>
+  </div>
+
+  <footer>
+    <p><a href="../my-blog/index.html">← Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
