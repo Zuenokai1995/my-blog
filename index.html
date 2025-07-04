@@ -11,28 +11,12 @@
       color: #e0e0e0;
       margin: 0;
       padding: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: -50px;
-      left: -50px;
-      width: 120%;
-      height: 120%;
-      pointer-events: none;
-      background: radial-gradient(ellipse at center, rgba(255, 204, 153, 0.03) 0%, transparent 70%);
-      z-index: 0;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
-      position: relative;
-      z-index: 2;
     }
 
     header {
@@ -49,7 +33,6 @@
       font-size: 2.8rem;
       margin: 0;
       text-shadow: 0 0 8px #ffcc99aa;
-      animation: pulseGlow 3s ease-in-out infinite alternate;
     }
 
     header p {
@@ -58,25 +41,48 @@
       color: #eac9aa;
     }
 
+    /* Navigation */
     nav {
-      margin: 30px 0;
-      text-align: center;
       background-color: #111;
-      padding: 15px;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(255, 204, 153, 0.07);
+      margin: 30px 0;
+      padding: 15px 20px;
+      text-align: center;
     }
 
-    nav a {
+    .nav-top {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffcc99;
+      margin-bottom: 10px;
+      text-shadow: 0 0 4px #ffcc9988;
+    }
+
+    .nav-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      border-top: 1px dashed #444;
+      padding-top: 10px;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 10px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
       text-decoration: none;
       color: #ffcc99;
       font-weight: bold;
-      margin: 0 12px;
-      transition: color 0.3s ease;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 4px #ffcc9955;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
+      background-color: #292929;
       color: #ffe5b4;
+      box-shadow: 0 0 8px #ffcc99aa;
     }
 
     article {
@@ -120,29 +126,6 @@
       animation: rainbowGlow 0.1s infinite linear;
     }
 
-    @keyframes rainbowGlow {
-      0% {
-        box-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow;
-        border-color: red;
-      }
-      25% {
-        box-shadow: 0 0 10px yellow, 0 0 20px green, 0 0 30px cyan;
-        border-color: yellow;
-      }
-      50% {
-        box-shadow: 0 0 10px green, 0 0 20px blue, 0 0 30px indigo;
-        border-color: green;
-      }
-      75% {
-        box-shadow: 0 0 10px blue, 0 0 20px indigo, 0 0 30px violet;
-        border-color: blue;
-      }
-      100% {
-        box-shadow: 0 0 10px violet, 0 0 20px red, 0 0 30px orange;
-        border-color: violet;
-      }
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -153,15 +136,17 @@
       margin-top: 40px;
     }
 
+    @keyframes rainbowGlow {
+      0% { box-shadow: 0 0 10px red; border-color: red; }
+      25% { box-shadow: 0 0 10px yellow; border-color: yellow; }
+      50% { box-shadow: 0 0 10px green; border-color: green; }
+      75% { box-shadow: 0 0 10px blue; border-color: blue; }
+      100% { box-shadow: 0 0 10px violet; border-color: violet; }
+    }
+
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes flicker {
@@ -169,28 +154,18 @@
       100% { text-shadow: 0 0 2px #ffcc99, 0 0 10px #ffcc9988; }
     }
 
-    @keyframes pulseGlow {
-      0% {
-        text-shadow: 0 0 5px #ffcc99, 0 0 10px #ffcc9980;
-      }
-      100% {
-        text-shadow: 0 0 10px #ffcc99, 0 0 20px #ffcc99aa;
-      }
-    }
-
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-
       header h1 {
         font-size: 2.2rem;
+      }
+
+      .nav-links {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 6px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <header>
@@ -199,22 +174,25 @@
     </header>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="post1.html">Post 1</a>
-      <a href="post2.html">Post 2</a>
-      <a href="post3.html">Post 3</a>
-      <a href="post4.html">Post 4</a>
-      <a href="post5.html">Post 5</a>
-      <a href="post6.html">Post 6</a>
-      <a href="post7.html">Post 7</a>
-      <a href="post8.html">Post 8</a>
-      <a href="post9.html">Post 9</a>
-      <a href="post10.html">Poat 10</a>
+      <div class="nav-top">🏠 Home & Devlog</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="post1.html">Post 1</a>
+        <a href="post2.html">Post 2</a>
+        <a href="post3.html">Post 3</a>
+        <a href="post4.html">Post 4</a>
+        <a href="post5.html">Post 5</a>
+        <a href="post6.html">Post 6</a>
+        <a href="post7.html">Post 7</a>
+        <a href="post8.html">Post 8</a>
+        <a href="post9.html">Post 9</a>
+        <a href="post10.html">Post 10</a>
+      </div>
     </nav>
 
     <article>
       <h2>🆕 Latest Post: Post 10</h2>
-      <p>The Art is Still cooking but so it my mental health haha</p>
+      <p>The Art is Still cooking but so is my mental health haha</p>
       <a class="glow-btn" href="post10.html">Read Post 10 →</a>
     </article>
 
