@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 16: Witherwood Progress</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #1b140e;
+      background-image: repeating-linear-gradient(
+        90deg,
+        #3b2a1c 0px,
+        #3b2a1c 40px,
+        #2e1f14 40px,
+        #2e1f14 80px
+      );
+      color: #e6dcc7;
+      position: relative;
+    }
 
+    .window {
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      width: 200px;
+      height: 150px;
+      background: linear-gradient(to top, #2c3e50, #bdc3c7);
+      border: 6px solid #8b6b4a;
+      box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .snow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ffffff88 1px, transparent 0);
+      background-size: 10px 10px;
+      animation: snowFall 8s linear infinite;
+      z-index: 2;
+    }
+
+    @keyframes snowFall {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 100%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-color: #33261a;
+      border-bottom: 4px solid #5a4332;
+      box-shadow: 0 4px 20px #00000055;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      color: #f0e3c4;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #d8c9a5;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #2e2116;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e0d7bc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #1a130d;
+      color: #aa9c85;
+      border-top: 1px solid #3a2c1e;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #e0b97d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="window">
+    <div class="snow"></div>
+  </div>
+
+  <header>
+    <h1>Day 17-19: took a break</h1>
+    <p>
+      That’s right — I did absolutely nothing <strong>LOL</strong>.<br>
+      Well. i did try rendering ashveil in unity after struggling with files and camera, i still think the camera is broken, i might have to make yet another new project in unity so i can start. who know i might be super close to completeing the game</p>
+  </header>
+
+  <div class="content">
+    <p>
+      thing is ive realized im on a time limit and my acadmeic load is slowly but surely increasing as i now have some pending stuff i cant find time to do.
+     <br><br>
+      I honestly didn’t expect the forest to take shape so vividly. Guess it’s the late-night focus + rainy outside vibes combo that hit different.
+      <br><br>
+      That’s it for todays post, cya later future me.
+    </p>
+  </div>
+
+  <footer>
+    <p><a href="../my-blog/index.html">← Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
