@@ -2,204 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ashbound Devlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashbound Interactive Blog</title>
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #0d0d0d;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg-color: #0b0c10;
+      --accent1: #45a29e;
+      --accent2: #66fcf1;
+      --light: #c5c6c7;
+      --dark: #1f2833;
+      --text: #ffffff;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
     header {
-      background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
-      padding: 60px 20px 40px;
       text-align: center;
-      color: #ffcc99;
-      border-bottom: 2px solid #333;
-      box-shadow: 0 0 20px #ffcc99;
-      animation: flicker 2s infinite alternate;
+      padding: 60px 20px;
+      background: linear-gradient(to right, var(--accent1), var(--accent2));
+      color: var(--bg-color);
+      animation: slideInDown 1s ease forwards;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      text-shadow: 0 0 8px #ffcc99aa;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.1rem;
-      margin-top: 12px;
-      color: #eac9aa;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
-    /* Navigation */
     nav {
-      background-color: #111;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(255, 204, 153, 0.07);
-      margin: 30px 0;
-      padding: 15px 20px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background-color: var(--dark);
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    .nav-top {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #ffcc99;
-      margin-bottom: 10px;
-      text-shadow: 0 0 4px #ffcc9988;
-    }
-
-    .nav-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 10px;
-      border-top: 1px dashed #444;
-      padding-top: 10px;
-    }
-
-    .nav-links a {
-      display: block;
-      padding: 10px;
-      background-color: #1c1c1c;
-      border-radius: 8px;
+    nav a {
       text-decoration: none;
-      color: #ffcc99;
+      padding: 10px 18px;
+      background-color: var(--accent1);
+      color: var(--bg-color);
       font-weight: bold;
-      transition: all 0.2s ease;
-      box-shadow: 0 0 4px #ffcc9955;
-    }
-
-    .nav-links a:hover {
-      background-color: #292929;
-      color: #ffe5b4;
-      box-shadow: 0 0 8px #ffcc99aa;
-    }
-
-    article {
-      background-color: #1a1a1a;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(255, 204, 153, 0.1);
-      margin-bottom: 30px;
-      animation: fadeIn 0.8s ease-in-out;
-    }
-
-    article h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #ffcc99;
-    }
-
-    article p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #d4c2aa;
-    }
-
-    .glow-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      color: #fff;
-      background-color: #2a2a2a;
-      border: 1px solid #ffcc99;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 8px #ffcc99aa;
       transition: all 0.3s ease;
     }
 
-    .glow-btn:hover {
-      background-color: #5a5a5a;
-      transform: translateY(-2px);
-      animation: rainbowGlow 0.1s infinite linear;
+    nav a:hover {
+      background-color: var(--accent2);
+      transform: scale(1.05);
+      box-shadow: 0 0 12px var(--accent2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background-color: var(--dark);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, background 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: var(--accent1);
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .card h3 {
+      color: var(--accent2);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--light);
+      line-height: 1.5;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #222;
-      background-color: #111;
-      margin-top: 40px;
+      background-color: var(--dark);
+      color: var(--light);
+      margin-top: 50px;
     }
 
-    @keyframes rainbowGlow {
-      0% { box-shadow: 0 0 10px red; border-color: red; }
-      25% { box-shadow: 0 0 10px yellow; border-color: yellow; }
-      50% { box-shadow: 0 0 10px green; border-color: green; }
-      75% { box-shadow: 0 0 10px blue; border-color: blue; }
-      100% { box-shadow: 0 0 10px violet; border-color: violet; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes flicker {
-      0% { text-shadow: 0 0 5px #ffcc99, 0 0 15px #ffcc99aa; }
-      100% { text-shadow: 0 0 2px #ffcc99, 0 0 10px #ffcc9988; }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
       }
-
-      .nav-links {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-        gap: 6px;
+      to {
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Welcome to Ashbound</h1>
-      <p>The tale unfolds in code and chaos...</p>
-    </header>
+  <header>
+    <h1>Ashbound Devlog</h1>
+    <p>Where worldbuilding and pixel art collide ⚔️✨</p>
+  </header>
 
-    <nav>
-      <div class="nav-top">🏠 Home & Devlog</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="post1.html">Post 1</a>
-        <a href="post2.html">Post 2</a>
-        <a href="post3.html">Post 3</a>
-        <a href="post4.html">Post 4</a>
-        <a href="post5.html">Post 5</a>
-        <a href="post6.html">Post 6</a>
-        <a href="post7.html">Post 7</a>
-        <a href="post8.html">Post 8</a>
-        <a href="post9.html">Post 9</a>
-        <a href="post10.html">Post 10</a>
-        <a href="post11.html">Post 11</a>
-      </div>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="post1.html">Post 1</a>
+    <a href="post2.html">Post 2</a>
+    <a href="post3.html">Post 3</a>
+    <a href="post4.html">Post 4</a>
+    <a href="post5.html">Post 5</a>
+    <a href="post6.html">Post 6</a>
+    <a href="post7.html">Post 7</a>
+    <a href="post8.html">Post 8</a>
+    <a href="post9.html">Post 9</a>
+    <a href="post10.html">Post 10</a>
+  </nav>
 
-    <article>
-      <h2>🆕 Latest Post: Post 11</h2>
-      <p>Small break update </p>
-      <a class="glow-btn" href="post11.html">Read Post 11 →</a>
-    </article>
-
-    <footer>
-      &copy; 2025 Zuenokai1995 — All Rights Reserved
-    </footer>
+  <div class="grid">
+    <div class="card" onclick="location.href='post10.html'">
+      <h3>Post 10: Witherwood Progress</h3>
+      <p>16hrs deep in pixel art. Witherwood is massive compared to Ashveil. Visualizing ideas is finally paying off!</p>
+    </div>
+    <div class="card" onclick="location.href='post9.html'">
+      <h3>Post 9: The Origin of Ashveil</h3>
+      <p>Designing nonstop. Hyperfocus kicked in. Ashveil is no longer a plan, it's a reality!</p>
+    </div>
+    <!-- Add more cards for older posts -->
   </div>
+
+  <footer>
+    &copy; 2025 Zuenokai1995 — Powered by Determination + Pixels
+  </footer>
 </body>
 </html>
