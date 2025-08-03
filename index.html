@@ -1,40 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashbound Interactive Blog</title>
+  <title>Zuenokai Blog</title>
   <style>
     :root {
-      --bg-color: #0b0c10;
-      --accent1: #45a29e;
-      --accent2: #66fcf1;
-      --light: #c5c6c7;
-      --dark: #1f2833;
-      --text: #ffffff;
-    }
+      --glow-color: rgb(176, 252, 255);
+      --glow-spread-color: rgba(123, 251, 255, 0.781);
+      --enhanced-glow-color: rgb(206, 255, 255);
+      --btn-color: rgb(61, 127, 136);
+    }body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #000000, #0d1a1a);
+  color: var(--glow-color);
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 0.5em var(--glow-color);
+  margin-bottom: 2rem;
+}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+.glowbutton {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to right, var(--accent1), var(--accent2));
-      color: var(--bg-color);
-      animation: slideInDown 1s ease forwards;
-    }
+.glowbutton::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.glowbutton:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.glowbutton:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+  </style>
+</head>
+<body>
+  <h1>Zuenokai's Blog</h1><a href="post13.html" class="glowbutton">🛑 Farewell, Ashbound</a> <a href="post12.html" class="glowbutton">Post 12</a> <a href="post11.html" class="glowbutton">Post 11</a> <a href="post10.html" class="glowbutton">Post 10</a> <a href="post9.html" class="glowbutton">Post 9</a> <a href="post8.html" class="glowbutton">Post 8</a> <a href="post7.html" class="glowbutton">Post 7</a> <a href="post6.html" class="glowbutton">Post 6</a> <a href="post5.html" class="glowbutton">Post 5</a> <a href="post4.html" class="glowbutton">Post 4</a> <a href="post3.html" class="glowbutton">Post 3</a> <a href="post2.html" class="glowbutton">Post 2</a> <a href="post1.html" class="glowbutton">Post 1</a>
+
+</body>
+</html>    }
 
     header h1 {
       font-size: 3rem;
